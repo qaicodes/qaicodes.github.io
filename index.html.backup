@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qurratulain Saleem | Lead Data Scientist & AI Engineer</title>
+
+  <!-- SEO & Social Preview Meta Tags -->
+  <meta name="description" content="I build scalable AI/ML solutions—RAG chatbots, NLP pipelines, and cloud deployments. 9+ years of experience. Contact me for freelance AI/ML work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Qurratulain Saleem | Lead Data Scientist & AI Engineer" />
+  <meta property="og:description" content="Transform your data into actionable insights with enterprise-grade AI/ML pipelines. 9+ years of experience in Generative AI, RAG, NLP, and cloud deployment." />
+  <meta property="og:image" content="https://qaicodes.com/assets/social-preview.png" />
+  <meta property="og:url" content="https://qaicodes.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Qurratulain Saleem | AI Engineer & Data Scientist" />
+  <meta name="twitter:description" content="9+ years building scalable AI/ML products—RAG chatbots, NLP engines, and cloud deployments. Let's work together!" />
+  <meta name="twitter:image" content="https://qaicodes.com/assets/social-preview.png" />
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Header / Navigation */
+    header[role="navigation"] {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus,
+    .nav-links a.active {
+      background: rgba(255, 215, 0, 0.2);
+      color: #ffd700;
+      outline: none;
+    }
+
+    .nav-links a:focus {
+      outline: 2px dashed #ffd700;
+      outline-offset: 2px;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') center/cover;
+      opacity: 0.3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 5rem 2rem 0 2rem; /* Extra top padding to clear the fixed nav */
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffd700, #ffed4e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+      }
+      to {
+        filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.6));
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: #ccc;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .hero-value {
+      font-size: 1.2rem;
+      color: #ddd;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: #aaa;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #ffd700;
+      color: #000;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: #ffed4e;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+      outline: none;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #ffd700;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      background: rgba(255, 215, 0, 0.1);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .btn:focus {
+      outline: 2px dashed #ffd700;
+      outline-offset: 2px;
+    }
+
+    /* Sections */
+    main {
+      margin-top: 0; /* compensate for fixed header */
+    }
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #ffd700;
+    }
+
+    /* Experience Cards */
+    .experience-grid {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .experience-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .experience-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #ffd700, #ffed4e);
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+      border-color: #ffd700;
+    }
+
+    .experience-card .card-footer {
+      margin-top: 1.5rem;
+      text-align: right;
+    }
+
+    .detail-link {
+      color: #ffd700;
+      text-decoration: none;
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .experience-card:hover .detail-link {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .job-title {
+      font-size: 1.4rem;
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    .company {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .job-duration {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    .job-achievements {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .job-achievements li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #ddd;
+    }
+
+    .job-achievements li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #ffd700;
+    }
+
+    /* Terminal Effect */
+    .terminal {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 2rem 0;
+      font-family: 'Monaco', monospace;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .terminal-header {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .terminal-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .dot-red {
+      background: #ff5f56;
+    }
+
+    .dot-yellow {
+      background: #ffbd2e;
+    }
+
+    .dot-green {
+      background: #27ca3f;
+    }
+
+    .terminal-content {
+      color: #00ff00;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* Featured Projects */
+    .projects-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-bottom: 4rem;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(255, 215, 0, 0.2);
+      border-color: #ffd700;
+    }
+
+    .project-card img {
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: #ffd700;
+      font-size: 1.3rem;
+    }
+
+    .project-card p {
+      color: #ddd;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .project-links .btn-secondary {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.5rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .skill-category {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .skill-category:hover {
+      border-color: #ffd700;
+      transform: translateY(-3px);
+    }
+
+    .skill-category h3 {
+      color: #ffd700;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: rgba(255, 215, 0, 0.1);
+      color: #ffd700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+    }
+
+    /* Achievements Grid */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .achievement-card {
+      background: rgba(255, 215, 0, 0.1);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 215, 0, 0.15);
+    }
+
+    .achievement-number {
+      font-size: 2.5rem;
+      color: #ffd700;
+      font-weight: bold;
+      display: block;
+    }
+
+    .achievement-text {
+      color: #ddd;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      color: #ddd;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      display: grid;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .contact-form label {
+      text-align: left;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 6px;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px dashed #ffd700;
+    }
+
+    .contact-form button {
+      justify-self: start;
+      background: #ffd700;
+      color: #000;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-form button:hover,
+    .contact-form button:focus {
+      background: #ffed4e;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+      outline: none;
+    }
+
+    /* Contact Links */
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      color: #ffd700;
+      padding: 0.8rem 1.5rem;
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: 6px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+      background: rgba(255, 215, 0, 0.1);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* Utility: hide scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ffd700;
+      border-radius: 4px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .nav {
+        padding: 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .section {
+        padding: 4rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero-content {
+        padding-top: 6rem;
+      }
+
+      .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+      }
+
+      .hero-value {
+        font-size: 1.1rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .achievements-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo">QAI Codes</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>AI Engineering Without Compromises</h1>
+        <p class="hero-subtitle">Qurratulain Saleem | Lead Data Scientist</p>
+        <p class="hero-value">
+          I help startups and enterprises implement robust AI/ML systems—on schedule and under budget.
+        </p>
+        <p class="hero-description">
+          Seasoned AI & Data Science Specialist with 9+ years of experience in building, deploying, and optimizing AI/ML solutions across industries. Specializing in Generative AI, RAG, NLP, and scalable ML deployment.
+        </p>
+        <div class="cta-buttons">
+          <a href="#experience" class="btn btn-primary">View Experience</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-grid">
+        <div class="experience-card" role="region" aria-label="Ascendion Engineering - Lead Data Scientist">
+          <div class="job-header">
+            <div>
+              <div class="job-title">Lead Data Scientist</div>
+              <div class="company">Ascendion Engineering</div>
+            </div>
+            <div class="job-duration">05/2024 – Present</div>
+          </div>
+          <ul class="job-achievements">
+            <li>Automated clinical trial document digitization using advanced data extraction pipelines</li>
+            <li>Enhanced data quality with encoder-based models (BERT, DistilBERT) for regulatory compliance</li>
+            <li>Engineered ElasticSearch indexes for efficient clinical research data retrieval</li>
+            <li>Developed comprehensive unit tests achieving 95%+ data extraction accuracy</li>
+            <li>Implemented microservices architecture with RabbitMQ for scalable document processing</li>
+          </ul>
+          <div class="card-footer">
+            <a href="/case-studies/ascendion-clinical-trials" class="detail-link">View Case Study →</a>
+          </div>
+        </div>
+
+        <div class="experience-card" role="region" aria-label="KiwiTech Technologies - AI/ML Technical Lead">
+          <div class="job-header">
+            <div>
+              <div class="job-title">AI/ML Technical Lead</div>
+              <div class="company">KiwiTech Technologies</div>
+            </div>
+            <div class="job-duration">03/2024 – 05/2024</div>
+          </div>
+          <ul class="job-achievements">
+            <li>Built AI-driven LangChain Agent for dynamic tool selection and API data retrieval</li>
+            <li>Developed query classification system for intelligent multi-step API orchestration</li>
+            <li>Optimized retrieval efficiency—reduced response time from 2 minutes to 10 seconds</li>
+            <li>Enhanced data integration pipelines for multi-source information processing</li>
+            <li>Improved user satisfaction through latency reduction and accuracy enhancements</li>
+          </ul>
+          <div class="card-footer">
+            <a href="/case-studies/kiwitech-langchain-agent" class="detail-link">View Case Study →</a>
+          </div>
+        </div>
+
+        <div class="experience-card" role="region" aria-label="SourceFuse Technologies - AI/ML Technical Lead">
+          <div class="job-header">
+            <div>
+              <div class="job-title">AI/ML Technical Lead</div>
+              <div class="company">SourceFuse Technologies</div>
+            </div>
+            <div class="job-duration">09/2020 – 03/2024</div>
+          </div>
+          <ul class="job-achievements">
+            <li>Developed AI-driven legal document processing pipeline with 92% F1-score accuracy</li>
+            <li>Built RAG-based intelligent search system, reducing query latency by 40%</li>
+            <li>Fine-tuned DeBERTa & RoBERTa for contract clause classification & NER</li>
+            <li>Integrated OCR preprocessing with Azure Form Recognizer and Tesseract</li>
+            <li>Deployed scalable AI microservices using Docker, FastAPI, and AWS ECS</li>
+            <li>Implemented Explainable AI modules ensuring GDPR compliance</li>
+          </ul>
+          <div class="card-footer">
+            <a href="/case-studies/sourcefuse-rag-search" class="detail-link">View Case Study →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terminal Snippet -->
+      <aside aria-label="Command line demonstration" class="terminal">
+        <div class="terminal-header">
+          <div class="terminal-dot dot-red"></div>
+          <div class="terminal-dot dot-yellow"></div>
+          <div class="terminal-dot dot-green"></div>
+        </div>
+        <div class="terminal-content">
+          <p>$ forge --version</p>
+          <p>Qurratulain's AI Engineering Toolkit v9.0</p>
+          <p>✓ 9+ years of AI/ML expertise loaded</p>
+          <p>✓ Generative AI, RAG, NLP modules active</p>
+          <p>✓ Cloud deployment ready (AWS/Azure/GCP)</p>
+          <p>$ forge deploy --production</p>
+          <p>🚀 Ready to transform your AI vision into reality</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card" role="region" aria-label="RAG Chatbot for Legal Documents">
+          <img
+            src="/assets/rag-chatbot.png"
+            alt="Screenshot of RAG chatbot interface for legal document queries"
+            loading="lazy"
+          />
+          <h3>RAG Chatbot for Legal Documents</h3>
+          <p>
+            Built a Retrieval-Augmented Generation pipeline that answers contract
+            questions in under 10 seconds. Integrated OCR + Azure Form Recognizer for
+            document ingestion; deployed on AWS ECS.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/qaicodes/rag-chatbot"
+              class="btn btn-secondary"
+              target="_blank"
+            >
+              View on GitHub
+            </a>
+            <a href="/case-studies/rag-chatbot" class="btn btn-secondary">
+              Read Case Study
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card" role="region" aria-label="Clinical Trials Data Dashboard">
+          <img
+            src="/assets/elastic-clinical-dashboard.png"
+            alt="ElasticSearch-powered clinical trials dashboard screenshot"
+            loading="lazy"
+          />
+          <h3>Clinical Trials Data Dashboard</h3>
+          <p>
+            Automated ingestion and indexing of clinical trial PDFs (BERT & DistilBERT for
+            entity extraction). Achieved 92% F1-score accuracy. Reduced query latency by
+            80% via optimized ES index settings.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/qaicodes/clinical-dashboard"
+              class="btn btn-secondary"
+              target="_blank"
+            >
+              GitHub Repo
+            </a>
+            <a href="/case-studies/clinical-dashboard" class="btn btn-secondary">
+              Read Case Study
+            </a>
+          </div>
+        </div>
+
+        <!-- Add more project-card blocks as needed -->
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <h2 class="section-title">Technical Arsenal</h2>
+
+      <div class="skills-grid">
+        <div class="skill-category" role="region" aria-label="AI/ML Technologies">
+          <h3>🤖 AI/ML Technologies</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Generative AI</span>
+            <span class="skill-tag">LLM Fine-tuning</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">GPT/BERT</span>
+            <span class="skill-tag">Transformers</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">NLP</span>
+          </div>
+        </div>
+
+        <div class="skill-category" role="region" aria-label="Cloud & Infrastructure">
+          <h3>☁️ Cloud & Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">GCP</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">Lambda</span>
+          </div>
+        </div>
+
+        <div class="skill-category" role="region" aria-label="Data & Databases">
+          <h3>🗄️ Data & Databases</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Vector Databases</span>
+            <span class="skill-tag">ElasticSearch</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Pinecone</span>
+            <span class="skill-tag">Qdrant</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">NoSQL</span>
+            <span class="skill-tag">ETL</span>
+          </div>
+        </div>
+
+        <div class="skill-category" role="region" aria-label="Programming & Tools">
+          <h3>💻 Programming & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">PySpark</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">REST API</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">HuggingFace</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+      <h2 class="section-title">Key Achievements</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card" role="region" aria-label="Latency Improvement">
+          <span class="achievement-number">80%</span>
+          <p class="achievement-text">Latency Improvement in RAG Chatbots (3s → 0.6s)</p>
+        </div>
+
+        <div class="achievement-card" role="region" aria-label="Document Extraction Accuracy">
+          <span class="achievement-number">92%</span>
+          <p class="achievement-text">Document Extraction Accuracy (Clinical Trials)</p>
+        </div>
+
+        <div class="achievement-card" role="region" aria-label="Infrastructure Cost Reduction">
+          <span class="achievement-number">30%</span>
+          <p class="achievement-text">Infrastructure Cost Reduction (Cloud Deployments)</p>
+        </div>
+
+        <div class="achievement-card" role="region" aria-label="Release Cycle Reduction">
+          <span class="achievement-number">50%</span>
+          <p class="achievement-text">Release Cycle Reduction (CI/CD Pipelines)</p>
+        </div>
+
+        <div class="achievement-card" role="region" aria-label="Engineers Mentored">
+          <span class="achievement-number">10+</span>
+          <p class="achievement-text">Engineers Mentored</p>
+        </div>
+
+        <div class="achievement-card" role="region" aria-label="Years of AI Expertise">
+          <span class="achievement-number">9+</span>
+          <p class="achievement-text">Years of AI Expertise</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Let's Build the Future Together</h2>
+      <div class="contact" role="region" aria-label="Contact Me">
+        <p>
+          Ready to transform your AI vision into reality? Fill out the form below or use any of the
+          options to reach me directly.
+        </p>
+
+        <!-- Contact Form (replace action with your Formspree ID or other endpoint) -->
+        <form
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+          class="contact-form"
+          aria-label="Contact form"
+        >
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-links">
+          <a href="mailto:saleemqurratulain@gmail.com" class="contact-link" aria-label="Email Me"
+            >📧 Email</a
+          >
+          <a
+            href="https://www.linkedin.com/in/qurratulain-saleem/"
+            class="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            >💼 LinkedIn</a
+          >
+          <a
+            href="https://github.com/qaicodes"
+            class="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+            >🔗 GitHub</a
+          >
+          <a href="tel:+919899843703" class="contact-link" aria-label="Call Me"
+            >📱 +91-9899843703</a
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Qurratulain Saleem. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      });
+    });
+
+    // Update active navigation link on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+
+      let current = '';
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Intersection Observer for reveal animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px',
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(
+      '.experience-card, .terminal, .project-card, .skill-category, .achievement-card, .contact'
+    ).forEach((el) => {
+      revealObserver.observe(el);
+    });
+  </script>
+</body>
+</html>

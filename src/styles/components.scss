@@ -1,0 +1,250 @@
+/* Button Components */
+.btn {
+  @include button-base;
+
+  &--primary {
+    background: var(--color-primary);
+    color: var(--color-background);
+
+    &:hover,
+    &:focus {
+      background: var(--color-primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-primary);
+
+    &:hover,
+    &:focus {
+      background: rgba(255, 215, 0, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* Card Components */
+.card {
+  @include card;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+    border-color: var(--color-border-hover);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  &__title {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+  }
+
+  &__meta {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+
+  &__footer {
+    margin-top: var(--spacing-lg);
+    text-align: right;
+  }
+
+  &__link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+
+    .card:hover & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Achievement List */
+.achievement-list {
+  list-style: none;
+  margin-top: var(--spacing-md);
+
+  &__item {
+    margin-bottom: calc(var(--spacing-sm) + 0.3rem);
+    padding-left: var(--spacing-lg);
+    position: relative;
+    color: var(--color-text-secondary);
+
+    &::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+    }
+  }
+}
+
+/* Terminal Component */
+.terminal {
+  background: var(--color-background-secondary);
+  border: 1px solid #333;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+  font-family: var(--font-family-mono);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+
+  &__header {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    &--red {
+      background: #ff5f56;
+    }
+
+    &--yellow {
+      background: #ffbd2e;
+    }
+
+    &--green {
+      background: #27ca3f;
+    }
+  }
+
+  &__content {
+    color: #00ff00;
+    font-size: var(--font-size-sm);
+    line-height: 1.4;
+  }
+}
+
+/* Skill Tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.skill-tag {
+  background: rgba(255, 215, 0, 0.1);
+  color: var(--color-primary);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  transition: all var(--transition-normal);
+
+  &:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transform: translateY(-1px);
+  }
+}
+
+/* Achievement Numbers */
+.achievement-number {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: bold;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  @include glow-animation;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 500px;
+  margin: 0 auto var(--spacing-xl);
+
+  label {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  input,
+  textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-sm);
+    color: var(--color-text-primary);
+    font-family: var(--font-family-mono);
+    transition: border-color var(--transition-normal);
+
+    &:focus {
+      border-color: var(--color-primary);
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--color-text-muted);
+    }
+  }
+
+  button {
+    @extend .btn;
+    @extend .btn--primary;
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* Contact Links */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-xl);
+}
+
+.contact-link {
+  @extend .btn;
+  @extend .btn--secondary;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+} 

@@ -1,0 +1,40 @@
+{
+  "name": "qaicodes-portfolio",
+  "version": "2.0.0",
+  "description": "Modern portfolio website for Qurratulain Saleem - Lead Data Scientist & AI Engineer",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist",
+    "type-check": "tsc --noEmit",
+    "lint": "echo 'Linting...'",
+    "format": "echo 'Formatting...'"
+  },
+  "keywords": [
+    "portfolio",
+    "ai",
+    "machine-learning",
+    "data-science",
+    "typescript",
+    "vite"
+  ],
+  "author": "Qurratulain Saleem <saleemqurratulain@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://qaicodes.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qaicodes/qaicodes.github.io"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.1",
+    "sass": "^1.83.0",
+    "terser": "^5.40.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  }
+}
