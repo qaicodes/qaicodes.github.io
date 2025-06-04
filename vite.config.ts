@@ -32,7 +32,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/styles/variables.scss";`,
+        // Variables are imported in main.scss, no need for additionalData
       },
     },
     devSourcemap: true,

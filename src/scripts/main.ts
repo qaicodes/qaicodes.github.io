@@ -1,3 +1,7 @@
+// Import styles first
+import '../styles/main.scss'
+
+// Import components
 import './components/navigation'
 import './components/animations'
 import './components/contact-form'
