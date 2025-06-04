@@ -3,7 +3,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   // GitHub Pages deployment configuration
-  base: process.env.NODE_ENV === 'production' ? '/qaicodes.github.io/' : '/',
+  base: '/', // For .github.io repos, base should always be '/'
   
   // Build configuration
   build: {
