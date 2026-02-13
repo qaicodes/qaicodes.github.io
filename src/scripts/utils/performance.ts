@@ -49,7 +49,8 @@ export class PerformanceMonitor {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const fid = entry.processingStart - entry.startTime
+          const e: any = entry as any
+          const fid = (e.processingStart ?? e.startTime) - e.startTime
           this.reportMetric('FID', fid)
         }
       })
@@ -107,11 +108,13 @@ export class PerformanceMonitor {
         this.reportMetric('TTFB', ttfb)
         
         // DOM Content Loaded
-        const dcl = navigation.domContentLoadedEventEnd - navigation.navigationStart
+        const navStart = (navigation as any).navigationStart ?? 0
+
+        const dcl = navigation.domContentLoadedEventEnd - navStart
         this.reportMetric('DCL', dcl)
         
         // Load Complete
-        const loadComplete = navigation.loadEventEnd - navigation.navigationStart
+        const loadComplete = navigation.loadEventEnd - navStart
         this.reportMetric('Load_Complete', loadComplete)
       }
     })
